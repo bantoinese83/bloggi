@@ -8,7 +8,29 @@ import { Post } from '@/types/post';
 
 
 // Asynchronous function to fetch posts (replace with your actual API endpoint)
-async function getPosts(): Promise<Post[]> {
+async function getPosts(): Promise<({
+  id: number;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  date: string;
+  tags: string[];
+  likes: number;
+  comments: number;
+  views: number;
+  files: any[];
+  tipp: {
+    id: string;
+    sender_id: string;
+    receiver_id: string;
+    post_id: string;
+    amount: number;
+    created_at: string;
+    is_anonymous: boolean;
+    tenant_id: string
+  }
+})[]> {
   // Simulate an API call
   await new Promise(resolve => setTimeout(resolve, 500));
   // Replace with your actual data fetching logic here
@@ -92,24 +114,24 @@ export default function Home() {
           id: 1, name: 'technology',
           created_at: '',
           tenant_id: '',
-          image_url: "",
-          description: ""
+          image_url: '',
+          description: '',
         },
         {
           id: 2, name: 'programming',
           created_at: '',
           tenant_id: '',
-          image_url: "",
-          description: ""
+          image_url: '',
+          description: '',
         },
         {
           id: 3, name: 'travel',
           created_at: '',
           tenant_id: '',
-          image_url: "",
-          description: ""
+          image_url: '',
+          description: '',
         },
-      ]}>
+      ]} children={undefined}>
         {/* Add children content here */}
       </Sidebar>
 

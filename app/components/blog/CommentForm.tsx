@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import { Subscription } from '../../../types/subscription';
+import { Post } from '../../../types/post';
+import { Tag } from '../../../types/tag';
 
 interface CommentFormProps {
   onSubmit: (comment: string) => void;
   className?: string;
   subscription?: Subscription;
+  posts: Post[];
+  tags: Tag[];
 }
 
-const CommentForm: React.FC<CommentFormProps> = ({ onSubmit, className, subscription }) => {
+const CommentForm: React.FC<CommentFormProps> = ({ onSubmit, className, subscription, posts, tags }) => {
   const [comment, setComment] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -32,6 +36,22 @@ const CommentForm: React.FC<CommentFormProps> = ({ onSubmit, className, subscrip
           Subscribed to: {subscription.plan}
         </div>
       )}
+      <div>
+        <h4>Posts:</h4>
+        <ul>
+          {posts.map((post) => (
+            <li key={post.id}>{post.title}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h4>Tags:</h4>
+        <ul>
+          {tags.map((tag) => (
+            <li key={tag.id}>{tag.name}</li>
+          ))}
+        </ul>
+      </div>
     </form>
   );
 };

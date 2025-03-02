@@ -1,11 +1,14 @@
-
 "use client"
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { logger } from '@/next.config';
+import { Post } from '@/types/post';
+import { Tag } from '@/types/tag';
 
 interface Props {
   children: ReactNode;
+  posts: Post[];
+  tags: Tag[];
 }
 
 interface State {

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 const useData = (url: string) => {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,7 +15,7 @@ const useData = (url: string) => {
         const result = await response.json();
         setData(result);
       } catch (error) {
-        setError(error);
+        setError(error instanceof Error ? error : new Error('Unknown error'));
       } finally {
         setLoading(false);
       }

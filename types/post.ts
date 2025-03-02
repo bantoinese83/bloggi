@@ -1,3 +1,8 @@
+// src/types/post.ts
+
+import { Files } from './files';
+import { Tipp } from './tipp';
+
 export interface Post {
     id: string;
     user_id: string;
@@ -18,11 +23,13 @@ export interface Post {
     scheduled_at?: string; // ISO Date string
     embedded_content?: never; // Define a more specific type if needed
     tenant_id: string;
-    ai_generated_score?:number
+    ai_generated_score?: number;
     price?: number;
-    ai_suggestions?:string,
-    publish_schedule?: string
+    ai_suggestions?: string;
+    publish_schedule?: string;
     likes: number;
     comments: number;
     views: number;
+    files: Files[];
+    tipp: Tipp;
 }

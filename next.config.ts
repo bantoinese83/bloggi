@@ -24,4 +24,5 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
+export { logger };
 export default nextConfig;

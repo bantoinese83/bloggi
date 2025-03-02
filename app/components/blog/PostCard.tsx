@@ -1,14 +1,14 @@
 import React from 'react';
-import { Files } from '@/types/files';
-import { Tipp } from '@/types/tipp';
+import { Post } from '@/types/post';
+import { Tag } from '@/types/tag';
 
 interface PostCardProps {
   title: string;
   excerpt: string;
   author: string;
   date: string;
-  files: Files[];
-  tipp: Tipp;
+  files: Post['files'];
+  tipp: Post['tipp'];
 }
 
 const PostCard: React.FC<PostCardProps> = ({ title, excerpt, author, date, files, tipp }) => {

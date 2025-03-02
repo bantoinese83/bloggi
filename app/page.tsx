@@ -4,6 +4,8 @@ import Footer from './components/layout/Footer';
 import PostCard from './components/blog/PostCard';
 import TagList from './components/blog/TagList';
 import Sidebar from './components/layout/Sidebar';
+import { Files } from '../types/files';
+import { Tipp } from '../types/tipp';
 
 // Define types
 interface Post {
@@ -17,8 +19,8 @@ interface Post {
   likes: number;
   comments: number;
   views: number;
-  files?: any[]; // need to define any[]
-  tipp?: any; // need to define tipp
+  files?: Files[];
+  tipp?: Tipp;
 }
 
 export interface Tag {

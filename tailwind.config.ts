@@ -66,7 +66,41 @@ const config: Config = {
                 lg: 'var(--radius)',
                 md: 'calc(var(--radius) - 2px)',
                 sm: 'calc(var(--radius) - 4px)'
-            }
+            },
+            fontSize: {
+                base: 'var(--font-size-base)',
+                lg: 'var(--font-size-lg)',
+                sm: 'var(--font-size-sm)',
+            },
+            lineHeight: {
+                base: 'var(--line-height-base)',
+                lg: 'var(--line-height-lg)',
+                sm: 'var(--line-height-sm)',
+            },
+            fontWeight: {
+                normal: 'var(--font-weight-normal)',
+                bold: 'var(--font-weight-bold)',
+            },
+            keyframes: {
+                rotate: {
+                    '0%': { transform: 'rotate(0deg)' },
+                    '100%': { transform: 'rotate(360deg)' },
+                },
+                shake: {
+                    '0%, 100%': { transform: 'translateX(0)' },
+                    '25%': { transform: 'translateX(-5px)' },
+                    '50%': { transform: 'translateX(5px)' },
+                    '75%': { transform: 'translateX(-5px)' },
+                },
+                blink: {
+                    '50%': { opacity: '0' },
+                },
+            },
+            animation: {
+                rotate: 'rotate 2s linear infinite',
+                shake: 'shake 0.5s ease-in-out',
+                blink: 'blink 1s step-start infinite',
+            },
         }
     },
     plugins: [animate],

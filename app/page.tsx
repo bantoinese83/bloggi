@@ -3,33 +3,10 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import PostCard from './components/blog/PostCard';
 import Sidebar from './components/layout/Sidebar';
-import { Files } from '@/types/files';
-import { Tipp } from '@/types/tipp';
+import { Post } from '@/types/post';
 
-// Define types
-interface Post {
-  id: number;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  tags: string[];
-  likes: number;
-  comments: number;
-  views: number;
-  files?: Files[];
-  tipp?: Tipp;
-}
 
-export interface Tag {
-  id: number;
-  name: string;
-  description?: string;
-  image_url?: string;
-  created_at: string; // ISO Date string
-  tenant_id: string;
-}
+
 
 // Asynchronous function to fetch posts (replace with your actual API endpoint)
 async function getPosts(): Promise<Post[]> {

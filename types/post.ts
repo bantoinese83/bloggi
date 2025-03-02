@@ -4,7 +4,7 @@ import { Files } from './files';
 import { Tipp } from './tipp';
 
 export interface Post {
-    id: string;
+    id: number;
     user_id: string;
     title: string;
     slug: string;

@@ -8,60 +8,76 @@ import { Post } from '@/types/post';
 
 
 // Asynchronous function to fetch posts (replace with your actual API endpoint)
-async function getPosts(): Promise<({
-  id: number;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  tags: string[];
-  likes: number;
-  comments: number;
-  views: number;
-  files: any[];
-  tipp: {
-    id: string;
-    sender_id: string;
-    receiver_id: string;
-    post_id: string;
-    amount: number;
-    created_at: string;
-    is_anonymous: boolean;
-    tenant_id: string
-  }
-})[]> {
+async function getPosts(): Promise<Post[]> {
   // Simulate an API call
   await new Promise(resolve => setTimeout(resolve, 500));
   // Replace with your actual data fetching logic here
   return [
     {
       id: 1,
+      user_id: '1',
       title: 'Welcome to Lomi Blog',
-      excerpt: 'This is the first post on Lomi Blog. Stay tuned for more updates!',
+      slug: 'welcome-to-lomi-blog',
       content: 'Lorem ipsum dolor sit amet...',
-      author: 'John Doe',
-      date: '2023-09-01',
-      tags: ['introduction', 'updates'],
+      excerpt: 'This is the first post on Lomi Blog. Stay tuned for more updates!',
+      cover_image_url: '',
+      is_published: true,
+      is_draft: false,
+      published_at: '2023-09-01',
+      created_at: '2023-09-01',
+      updated_at: '2023-09-01',
+      reading_time_minutes: 5,
+      language: 'en',
+      view_count: 100,
+      visibility: 'public',
+      scheduled_at: '',
+      embedded_content: null,
+      tenant_id: '1',
+      ai_generated_score: 0,
+      price: 0,
+      ai_suggestions: '',
+      publish_schedule: '',
       likes: 15,
       comments: 5,
       views: 100,
       files: [],
-      tipp: { id: '1', sender_id: '1', receiver_id: '1', post_id: '1', amount: 10, created_at: '2023-09-01', is_anonymous: false, tenant_id: '1' }
+      tipp: { id: '1', sender_id: '1', receiver_id: '1', post_id: '1', amount: 10, created_at: '2023-09-01', is_anonymous: false, tenant_id: '1' },
+      author: 'John Doe',
+      date: '2023-09-01',
+      tags: ['introduction', 'updates']
     },
     {
       id: 2,
+      user_id: '2',
       title: 'Getting Started with Lomi',
-      excerpt: 'Learn how to get started with Lomi and create your first blog post.',
+      slug: 'getting-started-with-lomi',
       content: 'Ut enim ad minim veniam...',
-      author: 'Jane Smith',
-      date: '2023-09-02',
-      tags: ['tutorial', 'lomi'],
+      excerpt: 'Learn how to get started with Lomi and create your first blog post.',
+      cover_image_url: '',
+      is_published: true,
+      is_draft: false,
+      published_at: '2023-09-02',
+      created_at: '2023-09-02',
+      updated_at: '2023-09-02',
+      reading_time_minutes: 5,
+      language: 'en',
+      view_count: 150,
+      visibility: 'public',
+      scheduled_at: '',
+      embedded_content: null,
+      tenant_id: '2',
+      ai_generated_score: 0,
+      price: 0,
+      ai_suggestions: '',
+      publish_schedule: '',
       likes: 22,
       comments: 8,
       views: 150,
       files: [],
-      tipp: { id: '2', sender_id: '2', receiver_id: '2', post_id: '2', amount: 20, created_at: '2023-09-02', is_anonymous: false, tenant_id: '2' }
+      tipp: { id: '2', sender_id: '2', receiver_id: '2', post_id: '2', amount: 20, created_at: '2023-09-02', is_anonymous: false, tenant_id: '2' },
+      author: 'Jane Smith',
+      date: '2023-09-02',
+      tags: ['tutorial', 'lomi']
     },
   ];
 }

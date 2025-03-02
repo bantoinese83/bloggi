@@ -3,6 +3,16 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ErrorBoundary from "./ErrorBoundary";
 
+import { User } from "../types/user";
+import { Post } from "../types/post";
+import { Tag } from "../types/tag";
+import { Comment } from "../types/comment";
+import { Notification } from "../types/notification";
+import { Subscription } from "../types/subscription";
+import { Tipp } from "../types/tipp";
+import { Community } from "../types/community";
+import { Files } from "../types/files";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

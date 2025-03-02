@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
+import forms from "@tailwindcss/forms"; // Pe05e
 
 const config: Config = {
     darkMode: 'class',
@@ -7,6 +8,7 @@ const config: Config = {
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
         "./app/**/*.{js,ts,jsx,tsx,mdx}",
+        "./app/globals.css", // P3c9f
     ],
     theme: {
         container: {
@@ -103,7 +105,7 @@ const config: Config = {
             },
         }
     },
-    plugins: [animate],
+    plugins: [animate, forms], // Pe05e
 };
 
 export default config;

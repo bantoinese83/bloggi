@@ -3,7 +3,7 @@ import { Post } from '@/types/post';
 
 interface PostCardProps {
   title: string;
-  excerpt: string;
+  excerpt?: string;
   author: string;
   date: string;
   files?: Post['files'];
@@ -14,7 +14,7 @@ const PostCard: React.FC<PostCardProps> = ({ title, excerpt, author, date, files
   return (
     <div>
       <h2>{title}</h2>
-      <p>{excerpt}</p>
+      {excerpt && <p>{excerpt}</p>}
       <p>By {author}</p>
       <p>{date}</p>
       <div>

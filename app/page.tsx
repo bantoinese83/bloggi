@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect, useState } from 'react'; // Import useEffect and useState
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
@@ -31,7 +33,7 @@ async function getPosts(): Promise<Post[]> {
       view_count: 100,
       visibility: 'public',
       scheduled_at: '',
-      embedded_content: null,
+      embedded_content: undefined, // Use undefined
       tenant_id: '1',
       ai_generated_score: 0,
       price: 0,
@@ -64,7 +66,7 @@ async function getPosts(): Promise<Post[]> {
       view_count: 150,
       visibility: 'public',
       scheduled_at: '',
-      embedded_content: null,
+      embedded_content: undefined, // Use undefined
       tenant_id: '2',
       ai_generated_score: 0,
       price: 0,

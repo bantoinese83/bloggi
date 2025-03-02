@@ -1,19 +1,17 @@
 import React from 'react';
+import { Post } from '../../../types/post';
 
 interface BlogPostProps {
-  title: string;
-  content: string;
-  author: string;
-  date: string;
+  post: Post;
 }
 
-const BlogPost: React.FC<BlogPostProps> = ({ title, content, author, date }) => {
+const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
   return (
     <div>
-      <h1>{title}</h1>
-      <p>{content}</p>
-      <p>By {author}</p>
-      <p>{date}</p>
+      <h1>{post.title}</h1>
+      <p>{post.content}</p>
+      <p>By {post.user_id}</p>
+      <p>{post.published_at}</p>
     </div>
   );
 };

@@ -1,15 +1,16 @@
 import React from 'react';
+import { Tag } from '../../../types/tag';
 
 interface TagListProps {
-  tags: string[];
+  tags: Tag[];
 }
 
 const TagList: React.FC<TagListProps> = ({ tags }) => {
   return (
     <div>
-      {tags.map((tag, index) => (
-        <span key={index} className="tag">
-          {tag}
+      {tags.map((tag) => (
+        <span key={tag.id} className="tag">
+          {tag.name}
         </span>
       ))}
     </div>

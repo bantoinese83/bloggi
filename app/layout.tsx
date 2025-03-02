@@ -4,6 +4,8 @@ import "./globals.css"; // Ensure this is present
 import ErrorBoundary from "./ErrorBoundary";
 
 import React from "react";
+import { Post } from '@/types/post';
+import { Tag } from '@/app/page';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

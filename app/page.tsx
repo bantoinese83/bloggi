@@ -19,7 +19,14 @@ const posts = [
   },
 ];
 
-const Post = ({ title, excerpt, author, date }) => (
+interface PostProps {
+  title: string;
+  excerpt: string;
+  author: string;
+  date: string;
+}
+
+const Post = ({ title, excerpt, author, date }: PostProps) => (
   <div className="post">
     <h2>{title}</h2>
     <p>{excerpt}</p>

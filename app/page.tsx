@@ -23,7 +23,7 @@ interface Post {
 }
 
 export interface Tag {
-  id: string;
+  id: number;
   name: string;
   description?: string;
   image_url?: string;
@@ -113,21 +113,21 @@ export default function Home() {
       {/* Sidebar */}
       <Sidebar className="mt-8" posts={posts} tags={[
         {
-          id: "1", name: 'technology',
+          id: 1, name: 'technology',
           created_at: '',
           tenant_id: '',
           image_url: "",
           description: ""
         },
         {
-          id: "2", name: 'programming',
+          id: 2, name: 'programming',
           created_at: '',
           tenant_id: '',
           image_url: "",
           description: ""
         },
         {
-          id: "3", name: 'travel',
+          id: 3, name: 'travel',
           created_at: '',
           tenant_id: '',
           image_url: "",
@@ -138,21 +138,21 @@ export default function Home() {
       {/* Footer */}
       <Footer className="text-center mt-8" posts={posts} tags={[
         {
-          id: "1", name: 'technology',
+          id: 1, name: 'technology',
           created_at: '',
           tenant_id: '',
           image_url: "",
           description: ""
         },
         {
-          id: "2", name: 'programming',
+          id: 2, name: 'programming',
           created_at: '',
           tenant_id: '',
           image_url: "",
           description: ""
         },
         {
-          id: "3", name: 'travel',
+          id: 3, name: 'travel',
           created_at: '',
           tenant_id: '',
           image_url: "",

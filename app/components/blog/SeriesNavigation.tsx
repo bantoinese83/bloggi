@@ -1,10 +1,8 @@
 import React from 'react';
+import { Community } from '../../../types/community';
 
 interface SeriesNavigationProps {
-  series: {
-    title: string;
-    link: string;
-  }[];
+  series: Community[];
 }
 
 const SeriesNavigation: React.FC<SeriesNavigationProps> = ({ series }) => {

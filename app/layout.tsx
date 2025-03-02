@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css"; // Ensure this is present
+import "./globals.css";
 import ErrorBoundary from "./ErrorBoundary";
 
 import React from "react";

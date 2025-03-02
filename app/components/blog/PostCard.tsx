@@ -7,8 +7,8 @@ interface PostCardProps {
   excerpt: string;
   author: string;
   date: string;
-  files: Post['files'];
-  tipp: Post['tipp'];
+  files?: Post['files'];
+  tipp?: Post['tipp'];
 }
 
 const PostCard: React.FC<PostCardProps> = ({ title, excerpt, author, date, files, tipp }) => {
@@ -19,14 +19,14 @@ const PostCard: React.FC<PostCardProps> = ({ title, excerpt, author, date, files
       <p>By {author}</p>
       <p>{date}</p>
       <div>
-        {files.map((file) => (
+        {files && files.map((file) => (
           <div key={file.id}>
             <p>{file.file_path}</p>
           </div>
         ))}
       </div>
       <div>
-        <p>Tip Amount: {tipp.amount}</p>
+        {tipp && <p>Tip Amount: {tipp.amount}</p>}
       </div>
     </div>
   );

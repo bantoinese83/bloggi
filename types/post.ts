@@ -1,5 +1,3 @@
-// src/types/post.ts
-
 import { Files } from './files';
 import { Tipp } from './tipp';
 
@@ -32,4 +30,6 @@ export interface Post {
     views: number;
     files: Files[];
     tipp: Tipp;
+    author: string;
+    date: string;
 }

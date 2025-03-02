@@ -7,7 +7,6 @@ import { Post } from '@/types/post';
 
 
 
-
 // Asynchronous function to fetch posts (replace with your actual API endpoint)
 async function getPosts(): Promise<Post[]> {
   // Simulate an API call
@@ -110,7 +109,9 @@ export default function Home() {
           image_url: "",
           description: ""
         },
-      ]} />
+      ]}>
+        {/* Add children content here */}
+      </Sidebar>
 
       {/* Footer */}
       <Footer className="text-center mt-8" posts={posts} tags={[

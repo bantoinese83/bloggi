@@ -5,7 +5,7 @@ import ErrorBoundary from "./ErrorBoundary";
 
 import React from "react";
 import { Post } from '@/types/post';
-import { Tag } from '@/app/page';
+import { Tag } from '@/types/tag';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

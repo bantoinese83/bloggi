@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { logger } from '../next.config';
+import { logger } from '@/next.config';
 
 interface Props {
   children: ReactNode;

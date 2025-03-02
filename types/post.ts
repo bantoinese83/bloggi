@@ -32,4 +32,5 @@ export interface Post {
     tipp: Tipp;
     author: string;
     date: string;
+    tags: string;
 }

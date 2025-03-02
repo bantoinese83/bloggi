@@ -35,6 +35,16 @@
     --ring: 222 47% 11%;
 
     --radius: 0.5rem;
+
+    /* Global constants and variables for text styles */
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-sm: 0.875rem;
+    --line-height-base: 1.5;
+    --line-height-lg: 1.75;
+    --line-height-sm: 1.25;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
   }
 
   .dark {
@@ -113,6 +123,19 @@
     background-size: 200% 200%;
     animation: gradientX 15s ease infinite;
   }
+
+  /* Additional animations and micro-interactions */
+  .animate-rotate {
+    animation: rotate 2s linear infinite;
+  }
+
+  .animate-shake {
+    animation: shake 0.5s ease-in-out;
+  }
+
+  .animate-blink {
+    animation: blink 1s step-start infinite;
+  }
 }
 
 @keyframes fadeIn {
@@ -164,6 +187,37 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Community } from '../../../types/community';
+import { Community } from '@/types/community';
 
 interface SeriesNavigationProps {
   series: Community[];

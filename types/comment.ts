@@ -11,5 +11,7 @@ export interface Comment {
     downvotes: number;
     is_reported: boolean;
     tenant_id: string;
-    media_url?: string
+    media_url?: string;
+    author: string;
+    date: string;
 }

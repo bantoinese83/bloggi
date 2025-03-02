@@ -1,6 +1,6 @@
 import React from 'react';
-import { Files } from '../../../types/files';
-import { Tipp } from '../../../types/tipp';
+import { Files } from '@/types/files';
+import { Tipp } from '@/types/tipp';
 
 interface PostCardProps {
   title: string;

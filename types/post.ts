@@ -22,4 +22,5 @@ export interface Post {
     price?: number;
     ai_suggestions?:string,
     publish_schedule?: string
+
 }

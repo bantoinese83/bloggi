@@ -6,4 +6,6 @@ export interface Community {
     created_at: string;
     private: boolean;
     tenant_id: string;
+    link: string;
+    title: string;
 }

@@ -112,35 +112,54 @@ export default function Home() {
       </main>
 
       {/* Sidebar */}
-      <Sidebar className="mt-8">
-        <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Trending Tags</h3>
-        <TagList tags={[
-          {
-            id: "1", name: 'technology',
-            created_at: '',
-            tenant_id: '',
-            image_url: "",
-            description: ""
-          },
-          {
-            id: "2", name: 'programming',
-            created_at: '',
-            tenant_id: '',
-            image_url: "",
-            description: ""
-          },
-          {
-            id: "3", name: 'travel',
-            created_at: '',
-            tenant_id: '',
-            image_url: "",
-            description: ""
-          },
-        ]} />
-      </Sidebar>
+      <Sidebar className="mt-8" posts={posts} tags={[
+        {
+          id: "1", name: 'technology',
+          created_at: '',
+          tenant_id: '',
+          image_url: "",
+          description: ""
+        },
+        {
+          id: "2", name: 'programming',
+          created_at: '',
+          tenant_id: '',
+          image_url: "",
+          description: ""
+        },
+        {
+          id: "3", name: 'travel',
+          created_at: '',
+          tenant_id: '',
+          image_url: "",
+          description: ""
+        },
+      ]} />
 
       {/* Footer */}
-      <Footer className="text-center mt-8" />
+      <Footer className="text-center mt-8" posts={posts} tags={[
+        {
+          id: "1", name: 'technology',
+          created_at: '',
+          tenant_id: '',
+          image_url: "",
+          description: ""
+        },
+        {
+          id: "2", name: 'programming',
+          created_at: '',
+          tenant_id: '',
+          image_url: "",
+          description: ""
+        },
+        {
+          id: "3", name: 'travel',
+          created_at: '',
+          tenant_id: '',
+          image_url: "",
+          description: ""
+        },
+      ]} />
     </div>
   );
 }

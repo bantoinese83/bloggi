@@ -20,7 +20,7 @@ const useAuth = () => {
     fetchUser();
   }, []);
 
-  const login = async (email, password) => {
+  const login = async (email: string, password: string) => {
     try {
       const response = await fetch('/api/auth/login', {
         method: 'POST',

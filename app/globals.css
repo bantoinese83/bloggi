@@ -86,7 +86,7 @@
   * {
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-foreground;
   }
   main {
     @apply mx-auto max-w-7xl;

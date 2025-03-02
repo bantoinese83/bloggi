@@ -1,6 +1,7 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./globals.css"; // Ensure this is present
 import ErrorBoundary from "./ErrorBoundary";
 
 import React from "react";

@@ -101,7 +101,7 @@ const config: Config = {
                 shake: 'shake 0.5s ease-in-out',
                 blink: 'blink 1s step-start infinite',
             },
-        }
+        },
     },
     plugins: [animate],
 };

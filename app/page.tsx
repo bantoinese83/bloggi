@@ -27,29 +27,34 @@ interface PostProps {
 }
 
 const Post = ({ title, excerpt, author, date }: PostProps) => (
-  <div className="post">
-    <h2>{title}</h2>
-    <p>{excerpt}</p>
-    <div className="post-meta">
-      <span>By {author}</span> | <span>{date}</span>
+  <div className="bg-white shadow-md rounded-lg overflow-hidden">
+    <div className="p-4">
+      <h2 className="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
+        {title}
+      </h2>
+      <p className="text-gray-700 dark:text-gray-300">{excerpt}</p>
+      <div className="flex items-center justify-between mt-4">
+        <span className="text-sm text-gray-600 dark:text-gray-400">By {author}</span>
+        <span className="text-sm text-gray-600 dark:text-gray-400">{date}</span>
+      </div>
     </div>
   </div>
 );
 
 export default function Home() {
   return (
-    <div className="container">
-      <header>
-        <h1>Lomi Blog</h1>
-        <p>Welcome to Lomi Blog, your go-to source for the latest updates and articles.</p>
+    <div className="container mx-auto py-8">
+      <header className="text-center mb-8">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white">Lomi Blog</h1>
+        <p className="text-gray-700 dark:text-gray-300">Welcome to Lomi Blog, your go-to source for the latest updates and articles.</p>
       </header>
-      <main>
+      <main className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
           <Post key={post.id} {...post} />
         ))}
       </main>
-      <footer>
-        <p>&copy; 2023 Lomi Blog. All rights reserved.</p>
+      <footer className="text-center mt-8">
+        <p className="text-gray-700 dark:text-gray-300">© 2023 Lomi Blog. All rights reserved.</p>
       </footer>
     </div>
   );

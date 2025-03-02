@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react'; // Import useEffect and useS
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import PostCard from './components/blog/PostCard';
-import TagList from './components/blog/TagList';
 import Sidebar from './components/layout/Sidebar';
-import { Files } from '../types/files';
-import { Tipp } from '../types/tipp';
+import { Files } from '@/types/files';
+import { Tipp } from '@/types/tipp';
 
 // Define types
 interface Post {

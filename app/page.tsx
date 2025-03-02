@@ -54,9 +54,21 @@ export default function Home() {
       <Sidebar className="mt-8">
         <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Trending Tags</h3>
         <TagList tags={[
-          { id: 1, name: 'technology' },
-          { id: 2, name: 'programming' },
-          { id: 3, name: 'travel' },
+          {
+            id: 1, name: 'technology',
+            created_at: '',
+            tenant_id: '',
+          },
+          {
+            id: 2, name: 'programming',
+            created_at: '',
+            tenant_id: '',
+          },
+          {
+            id: 3, name: 'travel',
+            created_at: '',
+            tenant_id: '',
+          },
         ]} />
       </Sidebar>
 

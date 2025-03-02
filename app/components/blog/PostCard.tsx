@@ -1,6 +1,5 @@
 import React from 'react';
 import { Post } from '@/types/post';
-import { Tag } from '@/types/tag';
 
 interface PostCardProps {
   title: string;

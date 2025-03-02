@@ -1,17 +1,9 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ErrorBoundary from "./ErrorBoundary";
 
-import { User } from "../types/user";
-import { Post } from "../types/post";
-import { Tag } from "../types/tag";
-import { Comment } from "../types/comment";
-import { Notification } from "../types/notification";
-import { Subscription } from "../types/subscription";
-import { Tipp } from "../types/tipp";
-import { Community } from "../types/community";
-import { Files } from "../types/files";
 import React from "react";
 
 const geistSans = Geist({
@@ -28,7 +20,6 @@ export const metadata: Metadata = {
   title: "Lomi Blog",
   description: "Welcome to Lomi Blog, your go-to source for the latest updates and articles.",
   keywords: "lomi, blog, articles, updates",
-  viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
   openGraph: {
     type: "website",
@@ -46,20 +37,27 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport = {  // ADD THIS
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false
+}
+
 export default function RootLayout({
-  children,
-}: Readonly<{
+                                     children,
+                                   }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ErrorBoundary>
-          {children}
-        </ErrorBoundary>
-      </body>
+    <body
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+    >
+    <ErrorBoundary>
+      {children}
+    </ErrorBoundary>
+    </body>
     </html>
   );
 }
